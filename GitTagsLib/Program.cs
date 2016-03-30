@@ -14,7 +14,7 @@ namespace GitTagsLib
         {
             string dataFormat = "r";
             FolderBrowserDialog fileDialog = new FolderBrowserDialog();
-
+            fileDialog.Description = "Выберите папку с репозиторием";
             DialogResult result = fileDialog.ShowDialog();
             if (result != DialogResult.OK)
             { MessageBox.Show("Папка не выбрана."); Environment.Exit(0); }
