@@ -30,7 +30,7 @@ namespace GitTagsLib
             {
                 var tags = repo.Tags.Select(
                     t => new { name = t.FriendlyName.ToString(),
-                            date = ((Commit)t.Target).Author.When.ToString(dataFormat, CultureInfo.InvariantCulture) });
+                            date = ((Commit)t.Target).Committer.When.ToString(dataFormat, CultureInfo.InvariantCulture) });
                 if (tags.Count() > 0)
                 {
                     XmlDocument tagsXML = new XmlDocument();
